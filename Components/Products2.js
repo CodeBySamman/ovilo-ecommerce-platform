@@ -41,17 +41,18 @@ const Products2 = () => {
       {/* Display all products */}
       <div
         className="
-    grid
-    grid-cols-1
-    sm:grid-cols-2
-    md:grid-cols-3
-    lg:grid-cols-4
-    gap-4
-    sm:gap-5
-    md:gap-6
-    "
-      >
+       grid
+          grid-cols-1
+        sm:grid-cols-2
+         md:grid-cols-3
+       lg:grid-cols-4
+         gap-4
+          sm:gap-5
+            md:gap-6
+            " 
+             >
         {products?.map((item) => (
+         
           <div
             key={item._id}
             className="
@@ -68,18 +69,13 @@ const Products2 = () => {
         "
           >
             {/* Image */}
-            <Image
-              src={item.images}
-              alt={item.title}
-              className="
-          h-44
-          sm:h-48
-          md:h-52
-          lg:h-56
-          w-full
-          object-cover
-          "
-            />
+ <Image
+  src={item.images?.[0] || "/no-image.png"}
+  alt={item.title}
+  width={500}
+  height={500}
+  className="w-full h-full object-cover"
+/>
 
             {/* Content */}
             <div className="p-3 sm:p-4 flex flex-col flex-grow">

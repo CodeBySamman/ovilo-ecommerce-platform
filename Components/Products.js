@@ -182,8 +182,10 @@ const Products = () => {
               {/* Image */}
               <div className="w-full h-44 sm:h-52 md:h-56 overflow-hidden rounded-lg bg-gray-100">
                 <Image
-                  src={item?.images?.[0] || item.images}
+                  src={item.images?.[0] || "/no-image.png"}
                   alt={item.title}
+                    width={500}
+  height={500}
                   className="
             w-full
             h-full

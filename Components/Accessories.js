@@ -48,9 +48,11 @@ const Accessories = () => {
                 className="relative h-[320px] sm:h-[380px] md:h-[420px] rounded-2xl overflow-hidden group"
               >
                 <Image
-                  src={item.images}
+                  src={item.images?.[0] || "/no-image.png"}
                   className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
                   alt={item.title}
+                    width={500}
+  height={500}
                 />
 
                 <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-4 sm:p-6">

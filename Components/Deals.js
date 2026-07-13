@@ -69,7 +69,10 @@ export default function Deals() {
         "
           >
             <Image
-              src={deal.images}
+                src={deal.images?.[0] || "/no-image.png"}
+
+                width={500}
+  height={500}
               className="
           w-full
           h-52

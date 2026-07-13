@@ -66,7 +66,9 @@ const MenCollection = () => {
             "
               >
                 <Image
-                  src={item.images}
+                   src={item.images?.[0] || "/no-image.png"}
+                    width={500}
+  height={500}
                   className="
               w-full
               h-full

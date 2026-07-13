@@ -73,8 +73,11 @@ export default function Categories2() {
             "
               >
                 <Image
-                  src={item.images}
+                    src={item.images?.[0] || "/no-image.png"}
+
                   alt={item.title}
+                    width={500}
+  height={500}
                   className="
               w-full
               h-full

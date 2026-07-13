@@ -46,7 +46,7 @@ const Dashboard = () => {
   const {
     register,
     handleSubmit,
-
+      reset,
     formState: { errors },
   } = useForm();
 
@@ -72,6 +72,7 @@ const Dashboard = () => {
       });
 
       setOpen(false);
+      reset()
       // Refresh product list
       getData();
     } catch (error) {
@@ -117,11 +118,11 @@ const Dashboard = () => {
         )}
 
         {/* Sidebar */}
-        <aside
-          className={`fixed md:static top-0 left-0 z-30 h-screen w-64 bg-slate-900 text-white p-5 transform transition-transform duration-300
-    ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
-    md:translate-x-0`}
-        >
+       <aside
+  className={`fixed md:static top-0 left-0 z-50 h-screen w-64 bg-slate-900 text-white p-5 transform transition-transform duration-300
+  ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
+  md:translate-x-0`}
+>
           <h1 className="text-2xl font-bold mb-8">Shop Admin</h1>
 
           <ul className="flex flex-col space-y-4">

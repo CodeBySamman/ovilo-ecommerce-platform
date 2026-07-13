@@ -114,9 +114,12 @@ const totalItems = cart.reduce(
           <div className="flex flex-col xs:flex-row gap-4 items-center sm:items-start">
 
             <Image
-              src={item?.images?.[0] || "/noimage.png"}
+               src={item.images?.[0] || "/no-image.png"}
+
               className="w-20 h-20 sm:w-24 sm:h-24 rounded object-cover"
               alt={item.name}
+                width={500}
+  height={500}
             />
 
             <div className="text-center sm:text-left">

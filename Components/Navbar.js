@@ -53,12 +53,16 @@ export default function Navbar() {
 
           {/* List return */}
           {open && (
-            <div className="absolute top-14 right-0 bg-white text-black shadow-md rounded-lg z-[110] hidden md:flex border border-gray-200 flex-col gap-4 py-6 px-8 min-w-[180px]">
-              <Link href="/">Home</Link>
-              <Link href="/products2">Products</Link>
-              <Link href="/categories2">Categories</Link>
-              <Link href="/deals">Deals</Link>
-              <Link href="/contact">Contact</Link>
+            <div className="absolute cursor-pointer top-14 right-0 bg-white text-black shadow-md rounded-lg z-[110] hidden md:flex border border-gray-200 flex-col gap-4 py-6 px-8 min-w-[180px]">
+              <buttton onClick={() => router.push("/")}>Home</buttton>
+              <buttton onClick={() => router.push("/products2")}>
+                Products
+              </buttton>
+              <buttton onClick={() => router.push("/categories2")}>
+                Categories
+              </buttton>
+              <buttton onClick={() => router.push("/deals")}>Deals</buttton>
+              <buttton onClick={() => router.push("/contact")}>Contact</buttton>
             </div>
           )}
         </div>
@@ -108,19 +112,15 @@ export default function Navbar() {
               </button>
 
               {showdropdown && (
-                <div className="absolute right-0 mt-2 bg-white border rounded-md shadow-md w-44">
+                <div className="absolute right-0 mt-2 bg-white border rounded-md shadow-md w-44 z-[9999]">
+                  {" "}
                   <ul className="text-sm">
-                    <li>
-                      <button>
-                        <Link
-                          href="/admin/dashboard"
-                          className="block px-4 py-2 text-black"
-                        >
-                          Dashboard
-                        </Link>
-                      </button>
-                    </li>
-
+                    <button
+                      onClick={() => router.push("/admin/dashboard")}
+                      className="block w-full text-left px-4 py-2 text-black"
+                    >
+                      Dashboard
+                    </button>
                     <li>
                       <button
                         onClick={() => signOut()}
@@ -160,8 +160,7 @@ export default function Navbar() {
         </div>
 
         {open2 && (
-          <div className="mt-4 flex flex-col gap-4">
-            
+          <div className="mt-4 flex flex-col gap-4 cursor-pointer">
             {/* input section */}
             <input
               type="text"
@@ -181,11 +180,13 @@ export default function Navbar() {
           "
             />
 
-            <Link href="/">Home</Link>
-            <Link href="/products2">Products</Link>
-            <Link href="/categories2">Categories</Link>
-            <Link href="/deals">Deals</Link>
-            <Link href="/contact">Contact</Link>
+            <button onClick={() => router.push("/")}>Home</button>
+            <button onClick={() => router.push("/products2")}>Products</button>
+            <button onClick={() => router.push("/categories2")}>
+              Categories
+            </button>
+            <button onClick={() => router.push("/deals")}>Deals</button>
+            <button onClick={() => router.push("/contact")}>Contact</button>
 
             <Link href="/cart" className="flex items-center gap-2">
               <FiShoppingCart />
@@ -205,12 +206,12 @@ export default function Navbar() {
 
                 {showdropdown && (
                   <div className="mt-3 flex flex-col gap-2">
-                    <Link
-                      href="/admin/dashboard"
+                    <button
+                      onClick={() => router.push("/admin/dashboard")}
                       className="bg-white text-black px-3 py-2 rounded"
                     >
                       Dashboard
-                    </Link>
+                    </button>
 
                     <button
                       onClick={() => signOut()}

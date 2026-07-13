@@ -95,8 +95,11 @@ const CategoryResults = ({ category }) => {
           "
             >
               <Image
-                src={item?.images?.[0] || item.images}
+                  src={item.images?.[0] || "/no-image.png"}
+
                 alt={item.title}
+                  width={500}
+  height={500}
                 className="
             w-full
             h-48
