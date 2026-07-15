@@ -54,15 +54,15 @@ export default function Navbar() {
           {/* List return */}
           {open && (
             <div className="absolute cursor-pointer top-14 right-0 bg-white text-black shadow-md rounded-lg z-[110] hidden md:flex border border-gray-200 flex-col gap-4 py-6 px-8 min-w-[180px]">
-              <buttton onClick={() => router.push("/")}>Home</buttton>
-              <buttton onClick={() => router.push("/products2")}>
+              <button onClick={() => router.push("/")}>Home</button>
+              <button onClick={() => router.push("/products2")}>
                 Products
-              </buttton>
-              <buttton onClick={() => router.push("/categories2")}>
+              </button>
+              <button onClick={() => router.push("/categories2")}>
                 Categories
-              </buttton>
-              <buttton onClick={() => router.push("/deals")}>Deals</buttton>
-              <buttton onClick={() => router.push("/contact")}>Contact</buttton>
+              </button>
+              <button onClick={() => router.push("/deals")}>Deals</button>
+              <button onClick={() => router.push("/contact")}>Contact</button>
             </div>
           )}
         </div>

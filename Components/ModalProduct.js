@@ -12,11 +12,11 @@ const ModalProduct = ({
 }) => {
   return (
     <>
-      <div className="scroll-auto">
+      <div className="scroll-auto ">
         {open && (
           <div
             onClick={() => setOpen(false)}
-            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-3 sm:p-4"
+            className="fixed  inset-0 bg-black/50 flex items-center justify-center z-[9999] p-3 sm:p-4"
           >
             <div
               onClick={(e) => e.stopPropagation()}
