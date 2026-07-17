@@ -23,7 +23,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-[#1E3A8A] text-white shadow-md sticky top-0 z-[100]">
+    <nav className="bg-[#1E3A8A] text-white shadow-md sticky top-0 z-[300]">
       {/* DESKTOP NAVBAR */}
       <div className="hidden md:flex max-w-7xl mx-auto px-4 lg:px-6 py-4 items-center justify-between">
         {/* Logo */}
@@ -40,7 +40,7 @@ export default function Navbar() {
             onBlur={() => {
               setTimeout(() => {
                 setOpen(false);
-              }, 100);
+              }, 300);
             }}
             className="text-3xl"
           >
@@ -103,9 +103,9 @@ export default function Navbar() {
                 onBlur={() => {
                   setTimeout(() => {
                     setShowdropdown(false);
-                  }, 100);
+                  }, 300);
                 }}
-                className="flex items-center gap-1 border border-gray-100 px-3 py-1 rounded-md whitespace-nowrap"
+                className="flex items-center gap-1 border border-gray-300 px-3 py-1 rounded-md whitespace-nowrap"
               >
                 👤 {session.user.name || "User"}
                 {showdropdown ? <IoIosArrowUp /> : <IoIosArrowDown />}
@@ -117,14 +117,14 @@ export default function Navbar() {
                   <ul className="text-sm">
                     <button
                       onClick={() => router.push("/admin/dashboard")}
-                      className="block w-full text-left px-4 py-2 text-black"
+                      className="cursor-pointer block w-full text-left px-4 py-2 text-black"
                     >
                       Dashboard
                     </button>
                     <li>
                       <button
                         onClick={() => signOut()}
-                        className="w-full text-left px-4 py-2 hover:bg-gray-100 text-red-500"
+                        className="w-full text-left px-4 py-2 hover:bg-gray-300 text-red-500"
                       >
                         Sign Out
                       </button>
@@ -197,6 +197,11 @@ export default function Navbar() {
               <div className="border border-gray-600 rounded-lg p-3">
                 <button
                   onClick={() => setShowdropdown(!showdropdown)}
+                    onBlur={() => {
+                  setTimeout(() => {
+                    setShowdropdown(false);
+                  }, 300);
+                }}
                   className="flex items-center justify-between w-full"
                 >
                   <span>👤 {session.user.name}</span>
